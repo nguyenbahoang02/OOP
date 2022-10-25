@@ -1,0 +1,5 @@
+6.1 
+- Nếu người dùng chọn Cancel thì màn hình sẽ pop up lên 1 cửa sổ thông báo bạn đã chọn NO
+- Chuyển từ showConfirmDialog thành showOptionDialog, tạo 1 mảng Object gồm các lựa chọn, sửa các parameter thành:
+null, String câu hỏi, String tiêu đề cửa sổ, JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,null 
+
