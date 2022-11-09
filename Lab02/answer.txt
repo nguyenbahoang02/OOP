@@ -1,1 +1,0 @@
-Yes, Java allows us to do this.
