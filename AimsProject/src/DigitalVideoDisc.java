@@ -7,6 +7,9 @@ public class DigitalVideoDisc {
 	public String getTitle() {
 		return title;
 	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public String getCategory() {
 		return category;
 	}
@@ -25,6 +28,8 @@ public class DigitalVideoDisc {
 		this.category = category;
 		this.director = director;
 		this.cost = cost;
+	}
+	public DigitalVideoDisc() {
 	}
 	public DigitalVideoDisc(String title, String category, float cost) {
 		super();
