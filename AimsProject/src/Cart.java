@@ -5,12 +5,14 @@ public class Cart {
 	public ArrayList<DigitalVideoDisc> itemsOrdered = 
 			new ArrayList<DigitalVideoDisc>();
 	private int qtyOrdered=0; 
+	public float totalCost;
 	
 	public void addDigitalVideoDisc(DigitalVideoDisc disc) {
 		if(this.qtyOrdered<20) {
 			System.out.println("The disc has been added");
 			this.itemsOrdered.add(disc);
 			qtyOrdered++;
+			totalCost+=disc.getCost();
 		}else System.out.println("The cart is almost full");
 	}
 	
@@ -30,6 +32,7 @@ public class Cart {
 				System.out.println("The disc has been added");
 				this.itemsOrdered.add(digitalVideoDisc);
 				qtyOrdered++;
+				totalCost+=digitalVideoDisc.getCost();
 			}else System.out.println("The cart is almost full");
 		}
 	}
@@ -53,8 +56,37 @@ public class Cart {
 	}
 	
 	public void print() {
+		System.out.println("***********************CART***********************");
 		for(int i=0;i<qtyOrdered;i++) {
 			System.out.println(itemsOrdered.get(i));
+		}
+		System.out.println("Total cost: "+totalCost+"$");
+		System.out.println("***************************************************");
+	}
+	public void searchById(int sId) {
+		boolean check=false;
+		for(int i=0;i<qtyOrdered;i++) {
+			if(sId==itemsOrdered.get(i).getId()) {
+				System.out.println(itemsOrdered.get(i));
+				check=true;
+				break;
+			}
+		}
+		if(check==false) {
+			System.out.println("Can't find the dvd");
+		}
+	}
+	public void searchByTitle(String title) {
+		boolean check=false;
+		for(int i=0;i<qtyOrdered;i++) {
+			if(title.equals(itemsOrdered.get(i).getTitle())) {
+				System.out.println(itemsOrdered.get(i));
+				check=true;
+				break;
+			}
+		}
+		if(check==false) {
+			System.out.println("Can't find the dvd");
 		}
 	}
 }

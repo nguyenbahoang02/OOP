@@ -1,4 +1,5 @@
-public class Aims {
+
+public class CartTest {
 
 	public static void main(String[] args) {
 		Cart anOrder = new Cart();
@@ -16,9 +17,10 @@ public class Aims {
 		dvdlist[1] = dvd2;
 		dvdlist[2] = dvd3;
 		anOrder.addDigitalVideoDisc(dvd1, dvd2, dvd3);
-		System.out.print("Total cost is: ");
-		System.out.println(anOrder.totalCost());
-		//anOrder.removeDigitalVideoDisc(dvd2);
 		anOrder.print();
+		anOrder.searchById(4);
+		anOrder.searchById(2);
+		anOrder.searchByTitle("The Lion King");
 	}
+
 }

@@ -4,6 +4,8 @@ public class DigitalVideoDisc {
 	private String director;
 	private int length;
 	private float cost;
+	private static int nbDigitalVideoDisc = 0;
+	private int id;
 	public String getTitle() {
 		return title;
 	}
@@ -22,12 +24,16 @@ public class DigitalVideoDisc {
 	public float getCost() {
 		return cost;
 	}
+	public int getId() {
+		return id;
+	}
 	public DigitalVideoDisc(String title, String category, String director, float cost) {
 		super();
 		this.title = title;
 		this.category = category;
 		this.director = director;
 		this.cost = cost;
+		id = nbDigitalVideoDisc++;
 	}
 	public DigitalVideoDisc() {
 	}
@@ -36,10 +42,12 @@ public class DigitalVideoDisc {
 		this.title = title;
 		this.category = category;
 		this.cost = cost;
+		id = nbDigitalVideoDisc++;
 	}
 	public DigitalVideoDisc(String title) {
 		super();
 		this.title = title;
+		id = nbDigitalVideoDisc++;
 	}
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
 		super();
@@ -48,6 +56,7 @@ public class DigitalVideoDisc {
 		this.director = director;
 		this.length = length;
 		this.cost = cost;
+		id = nbDigitalVideoDisc++;
 	}
 	@Override
 	public boolean equals(Object o) {
@@ -56,8 +65,8 @@ public class DigitalVideoDisc {
 	}
 	@Override
 	public String toString() {
-		return "DigitalVideoDisc [title=" + title + ", category=" + category + ", director=" + director + ", length="
-				+ length + ", cost=" + cost + "]";
+		return "DVD - [" + title + "] - [" + category + "] - [" + director + "] - ["
+				+ length + "]: [" + cost + "] $";
 	}
 	
 }
