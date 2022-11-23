@@ -1,4 +1,7 @@
+package hust.soict.dsai.aims.cart;
 import java.util.ArrayList;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
