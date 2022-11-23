@@ -1,6 +1,4 @@
-package hust.soict.dsai.test.cart;
-import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+package hust.soict.dsai.aims;
 
 public class CartTest {
 
@@ -21,10 +19,5 @@ public class CartTest {
 		dvdlist[2] = dvd3;
 		anOrder.addDigitalVideoDisc(dvd1, dvd2, dvd3);
 		anOrder.print();
-		anOrder.searchById(4);
-		anOrder.searchById(2);
-		anOrder.searchByTitle("The Lion King");
-		anOrder.searchByTitle("Frozen");
 	}
-
 }

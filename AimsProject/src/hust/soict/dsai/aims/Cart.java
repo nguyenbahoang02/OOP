@@ -1,7 +1,5 @@
-package hust.soict.dsai.aims.cart;
+package hust.soict.dsai.aims;
 import java.util.ArrayList;
-
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
@@ -66,30 +64,6 @@ public class Cart {
 		System.out.println("Total cost: "+totalCost+"$");
 		System.out.println("***************************************************");
 	}
-	public void searchById(int sId) {
-		boolean check=false;
-		for(int i=0;i<qtyOrdered;i++) {
-			if(sId==itemsOrdered.get(i).getId()) {
-				System.out.println(itemsOrdered.get(i));
-				check=true;
-				break;
-			}
-		}
-		if(check==false) {
-			System.out.println("Can't find the dvd");
-		}
-	}
-	public void searchByTitle(String title) {
-		boolean check=false;
-		for(int i=0;i<qtyOrdered;i++) {
-			if(title.equals(itemsOrdered.get(i).getTitle())) {
-				System.out.println(itemsOrdered.get(i));
-				check=true;
-				break;
-			}
-		}
-		if(check==false) {
-			System.out.println("Can't find the dvd");
-		}
-	}
+	
+	
 }
