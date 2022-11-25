@@ -1,0 +1,6 @@
+- Java là ngôn ngữ pass by value
+- Sau khi gọi hàm swap thì tiêu đề của 2 đối tượng vẫn giữ nguyên vì tham số truyền vào hàm chỉ là giá trị nên những gì được 
+thay đổi bên trong không ảnh hưởng đến giá trị của 2 đối tượng
+- Sau khi gọi hàm changeTitle thì tiêu đề của JungleDVD đã bị thay đổi vì bên trong hàm changeTitle đã thay đổi 
+thuộc tính title của đối tượng JungleDVD, còn việc tạo ra 1 dvd mới với title cũ thì không ảnh hưởng gì 
+vì biến dvd lúc này được trỏ đến 1 đối tượng mới có tiêu đề cũ
