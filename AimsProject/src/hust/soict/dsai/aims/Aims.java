@@ -1,6 +1,6 @@
 package hust.soict.dsai.aims;
 import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Aims {
 
@@ -13,7 +13,7 @@ public class Aims {
 				"Stars War", "Science Fiction", "George Lucas", 87, 24.95f);
 		//anOrder.addDigitalVideoDisc(dvd2);
 		DigitalVideoDisc dvd3 = new DigitalVideoDisc(
-				"Aladin", "Animation", "Roger Allers", 18.99f);
+				"Aladin", "Animation", "Roger Allers", 100, 18.99f);
 		//anOrder.addDigitalVideoDisc(dvd3);
 		DigitalVideoDisc dvdlist[] = new DigitalVideoDisc[20];
 		dvdlist[0] = dvd1;

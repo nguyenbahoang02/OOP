@@ -1,5 +1,5 @@
 package hust.soict.dsai.test.store;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store;
 
 public class StoreTest {
@@ -12,7 +12,7 @@ public class StoreTest {
 				"Stars War", "Science Fiction", "George Lucas", 87, 24.95f);
 		//anOrder.addDigitalVideoDisc(dvd2);
 		DigitalVideoDisc dvd3 = new DigitalVideoDisc(
-				"Aladin", "Animation", "Roger Allers", 18.99f);
+				"Aladin", "Animation", "Roger Allers", 100, 18.99f);
 		//anOrder.addDigitalVideoDisc(dvd3);
 		DigitalVideoDisc dvdlist[] = new DigitalVideoDisc[20];
 		store.addDVD(dvd3);
