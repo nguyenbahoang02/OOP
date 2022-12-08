@@ -15,12 +15,12 @@ public class Book extends Media{
 
 	public List<String> authors = new ArrayList<String>();
 	
-	public Book(int id, String title, String category, float cost, List<String> authors) {
+	public Book(String title, String category, float cost, List<String> authors) {
 		super();
-		this.id = id;
-		this.title = title;
-		this.category = category;
-		this.cost = cost;
+		this.setId(getCurrentId());
+		this.setTitle(title);
+		this.setCategory(category);
+		this.setCost(cost);
 		this.authors = authors;
 	}
 
@@ -46,8 +46,10 @@ public class Book extends Media{
 
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", category=" + category + ", cost=" + cost + ", authors="
-				+ authors + "]";
+		return "Book [" + this.getTitle() 
+		+ "] - [" + this.getCategory() 
+		+ "] - [" + this.getCost() 
+		+ "$] - ["+ authors + "]";
 	}
 	
 }

@@ -1,8 +1,8 @@
 package hust.soict.dsai.aims.media;
 
 public class Disc extends Media{
-	protected int length;
-	protected String director;
+	private int length;
+	private String director;
 	
 	public int getLength() {
 		return length;
@@ -10,8 +10,12 @@ public class Disc extends Media{
 	public String getDirector() {
 		return director;
 	}
-	public Disc(int length, String director) {
+	public Disc(String title, String category, String director, int length, float cost) {
 		super();
+		this.setCategory(category);
+		this.setCost(cost);
+		this.setTitle(title);
+		this.setId(getCurrentId());
 		this.length = length;
 		this.director = director;
 	}

@@ -1,10 +1,19 @@
 package hust.soict.dsai.aims.media;
 
+import java.util.Comparator;
+
 public abstract class Media extends Object{
-	protected int id;
-	protected String title;
-	protected String category;
-	protected float cost;
+	private int id;
+	private String title;
+	private String category;
+	private float cost;
+	private static int currentId=0;
+	public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
+	public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
+	
+	public int getCurrentId() {
+		return currentId++;
+	}
 	
 	public int getId() {
 		return id;
@@ -48,5 +57,20 @@ public abstract class Media extends Object{
 	public Media() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		boolean a = false;
+		if(obj instanceof Media) {
+			Media objMedia = (Media)obj;
+			if(objMedia.getTitle().equals(this.getTitle())) {
+				a = true;
+			}
+		}
+		return a;
+	}
+	public void play() {
+		
 	}
 }
