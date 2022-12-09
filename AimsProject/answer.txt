@@ -1,0 +1,4 @@
+Chúng ta nên implement Comparable interface ở class Media 
+Ở trong class đó ta implement hàm compareTo() như 1 thuộc tính  của class Media public int compareTo(Media media)
+Chúng ta không thể có 2 cách sắp xếp bằng cách này
+Ta sẽ tạo 1 class DvdComparator implement interface Comparator rồi làm như class MediaComparator rồi tạo 1 thuộc tính trong Class DigitalVideoDisc như class Media
