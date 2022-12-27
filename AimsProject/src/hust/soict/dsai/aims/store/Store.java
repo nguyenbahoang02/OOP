@@ -8,6 +8,9 @@ import hust.soict.dsai.aims.media.Media;
 public class Store {
 	public ArrayList<Media> itemsInStore = 
 			new ArrayList<Media>();
+	public ArrayList<Media> getItemsInStore() {
+		return itemsInStore;
+	}
 	public void addMedia(Media inputMedia) {
 		if(itemsInStore.contains(inputMedia)) {
 			System.out.println("This item is already in the Store");
