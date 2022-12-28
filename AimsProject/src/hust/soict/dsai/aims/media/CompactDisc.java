@@ -1,6 +1,13 @@
 package hust.soict.dsai.aims.media;
 
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
 
 public class CompactDisc extends Disc implements Playable{
 	private String artist;
@@ -42,9 +49,26 @@ public class CompactDisc extends Disc implements Playable{
 	}
 	
 	public void play() {
-		for (Track track : tracks) {
-				track.play();
+		JDialog jDialog = new JDialog();
+		jDialog.setAlwaysOnTop(true);
+		jDialog.setSize(400, 300);
+		jDialog.setLayout(new GridLayout(tracks.size()*2+1, 1));
+		for(int i=0;i<tracks.size();i++) {
+			JLabel jLabel1 = new JLabel("Playing DVD: " + this.getTitle());
+			JLabel jLabel2 = new JLabel("DVD length: " + this.getLength());
+			jDialog.add(jLabel1);
+			jDialog.add(jLabel2);
 		}
+		JButton button = new JButton("OK");
+		jDialog.add(button);
+		jDialog.setLocationRelativeTo(null);
+		jDialog.setVisible(true);
+		button.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				jDialog.setVisible(false);
+			}
+		});		
 	}
 
 	@Override

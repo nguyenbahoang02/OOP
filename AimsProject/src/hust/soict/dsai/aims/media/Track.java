@@ -1,5 +1,13 @@
 package hust.soict.dsai.aims.media;
 
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+
 public class Track implements Playable{
 	private String title;
 	private int length;
@@ -19,9 +27,22 @@ public class Track implements Playable{
 		
 	}
 	public void play() {
-		
-		System.out.println("Playing DVD: " + this.getTitle());
-		System.out.println("DVD length: " + this.getLength());
+		JDialog jDialog = new JDialog();
+		jDialog.setAlwaysOnTop(true);
+		jDialog.setSize(400, 300);
+		jDialog.setLayout(new FlowLayout());
+		jDialog.setLocationRelativeTo(null);
+		JButton button = new JButton("OK");
+		jDialog.add(button);
+		jDialog.setVisible(true);
+		JLabel jLabel = new JLabel("Playing DVD: " + this.getTitle() + "\nDVD length: " + this.getLength());
+		jDialog.add(jLabel);
+		button.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				jDialog.setVisible(false);
+			}
+		});		
 	}
 	
 	public String playString() {

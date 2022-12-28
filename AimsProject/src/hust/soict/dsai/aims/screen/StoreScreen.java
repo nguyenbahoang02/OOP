@@ -20,14 +20,16 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
+import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.Media;
 import hust.soict.dsai.aims.store.Store;
 
 public class StoreScreen extends JFrame{
 	private Store store;
-	
-	public StoreScreen(Store store) {
+	private Cart cart;
+	public StoreScreen(Store store, Cart cart) {
 		this.store = store;
+		this.cart = cart;
 		Container cp = getContentPane();
 		cp.setLayout(new BorderLayout());
 		cp.add(createNorth(), BorderLayout.NORTH);
@@ -84,7 +86,7 @@ public class StoreScreen extends JFrame{
 		center.setLayout(new GridLayout(3, 3, 2, 2));
 		ArrayList<Media> mediaInStore = store.getItemsInStore();
 		for(int i=0; i<store.itemsInStore.size(); i++) {
-			MediaStore cell = new MediaStore(mediaInStore.get(i));
+			MediaStore cell = new MediaStore(mediaInStore.get(i),this.cart);
 			center.add(cell);
 		}
 		return center;
