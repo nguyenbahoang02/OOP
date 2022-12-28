@@ -1,13 +1,20 @@
 package hust.soict.dsai.aims.screen;
 
+import java.awt.BorderLayout;
+import java.awt.Button;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.renderable.ContextualRenderedImageFactory;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import hust.soict.dsai.aims.media.Media;
@@ -27,7 +34,9 @@ public class MediaStore extends JPanel{
 		container.setLayout(new FlowLayout(FlowLayout.CENTER));
 		container.add(new JButton("Add to cart"));
 		if(media instanceof Playable) {
-			container.add(new JButton("Play"));
+			JButton playButton = new JButton("Play");
+			playButton.addActionListener(new ClickedListener());
+			container.add(playButton);
 		}
 		this.add(Box.createVerticalGlue());
 		this.add(title);
@@ -35,6 +44,30 @@ public class MediaStore extends JPanel{
 		this.add(Box.createVerticalGlue());
 		this.add(container);
 		this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+	}
+	
+	private class ClickedListener implements ActionListener{
+		@Override
+		public void actionPerformed(ActionEvent e) { 
+//			JDialog jDialog = new JDialog();
+//			jDialog.setAlwaysOnTop(true);
+//			jDialog.setSize(400, 300);
+//			jDialog.setLayout(new FlowLayout());
+//			jDialog.setLocationRelativeTo(null);
+//			JButton button = new JButton("OK");
+//			jDialog.add(button);
+//			jDialog.setVisible(true);
+//			button.addActionListener(new ActionListener() {
+//				
+//				@Override
+//				public void actionPerformed(ActionEvent e) {
+//					// TODO Auto-generated method stub
+//					jDialog.setVisible(false);
+//				}
+//			});
+//			
+			media.play();
+		}
 	}
 }
 

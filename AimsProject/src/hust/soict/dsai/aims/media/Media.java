@@ -73,4 +73,5 @@ public abstract class Media extends Object{
 	public void play() {
 		
 	}
+	
 }
