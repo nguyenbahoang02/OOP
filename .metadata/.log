@@ -1364,3 +1364,538 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:40:27.063
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.core.resources 4 0 2022-12-28 07:40:28.516
+!MESSAGE Error occurred while reading master table file
+!STACK 0
+java.nio.charset.MalformedInputException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:274)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:176)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3416)
+	at org.eclipse.core.internal.resources.SaveManager.getBadSequenceNumberErrorMessage(SaveManager.java:1641)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1622)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1275)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1266)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1239)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1150)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-12-28 07:40:28.519
+!MESSAGE An internal error occurred during: "Periodic workspace save.".
+!STACK 0
+java.lang.IllegalArgumentException: Cannot set lower sequence number for root (previous: 11, new: 1). Location: C:\Users\nguye\Documents\GitHub\OOP\.metadata\.plugins\org.eclipse.core.resources\.safetable\org.eclipse.core.resourcesTimestamps and tree sequence numbers from file:
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1623)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1275)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1266)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1239)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1150)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:41:48.828
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:41:48.836
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:45:20.396
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:45:20.402
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:45:21.717
+!MESSAGE Error filtering index locations based on qualifier.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addDocumentNames(DiskIndex.java:115)
+	at org.eclipse.jdt.internal.core.index.Index.queryDocumentNames(Index.java:192)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.getIndexesNotInMeta(MetaIndex.java:78)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.findMatchingIndexNames(IndexManager.java:1608)
+	at org.eclipse.jdt.internal.core.search.IndexSelector.getIndexLocations(IndexSelector.java:310)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.selectIndexURLs(JavaSearchParticipant.java:160)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.getIndexes(PatternSearchJob.java:186)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:47)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.ensureReadyToRun(PatternSearchJob.java:99)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:220)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:605)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:506)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:465)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:158)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1319)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:950)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:907)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.addSubtypes(MainMethodSearchEngine.java:129)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.searchMainMethods(MainMethodSearchEngine.java:106)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine$1.run(MainMethodSearchEngine.java:166)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:45:21.718
+!MESSAGE Error filtering index locations based on qualifier.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addDocumentNames(DiskIndex.java:115)
+	at org.eclipse.jdt.internal.core.index.Index.queryDocumentNames(Index.java:192)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.getIndexesNotInMeta(MetaIndex.java:78)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.findMatchingIndexNames(IndexManager.java:1608)
+	at org.eclipse.jdt.internal.core.search.IndexSelector.getIndexLocations(IndexSelector.java:310)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.selectIndexURLs(JavaSearchParticipant.java:160)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.getIndexes(PatternSearchJob.java:186)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:47)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:109)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:333)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:605)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:506)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:465)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:158)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1319)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:950)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:907)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.addSubtypes(MainMethodSearchEngine.java:129)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.searchMainMethods(MainMethodSearchEngine.java:106)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine$1.run(MainMethodSearchEngine.java:166)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:45:21.867
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:45:21.870
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:46:08.397
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:46:08.402
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.core.resources 4 0 2022-12-28 07:46:48.885
+!MESSAGE Error occurred while reading master table file
+!STACK 0
+java.nio.charset.MalformedInputException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:274)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:176)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3416)
+	at org.eclipse.core.internal.resources.SaveManager.getBadSequenceNumberErrorMessage(SaveManager.java:1641)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1622)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1275)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1266)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1239)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1150)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-12-28 07:46:48.889
+!MESSAGE An internal error occurred during: "Periodic workspace save.".
+!STACK 0
+java.lang.IllegalArgumentException: Cannot set lower sequence number for root (previous: 11, new: 1). Location: C:\Users\nguye\Documents\GitHub\OOP\.metadata\.plugins\org.eclipse.core.resources\.safetable\org.eclipse.core.resourcesTimestamps and tree sequence numbers from file:
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1623)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1275)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1266)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1239)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1150)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:47:00.845
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:47:00.850
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:47:45.045
+!MESSAGE Error filtering index locations based on qualifier.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addDocumentNames(DiskIndex.java:115)
+	at org.eclipse.jdt.internal.core.index.Index.queryDocumentNames(Index.java:192)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.getIndexesNotInMeta(MetaIndex.java:78)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.findMatchingIndexNames(IndexManager.java:1608)
+	at org.eclipse.jdt.internal.core.search.IndexSelector.getIndexLocations(IndexSelector.java:310)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.selectIndexURLs(JavaSearchParticipant.java:160)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.getIndexes(PatternSearchJob.java:186)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:47)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.ensureReadyToRun(PatternSearchJob.java:99)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:220)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:605)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:506)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:465)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:158)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1319)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:950)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:907)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.addSubtypes(MainMethodSearchEngine.java:129)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.searchMainMethods(MainMethodSearchEngine.java:106)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine$1.run(MainMethodSearchEngine.java:166)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:47:45.048
+!MESSAGE Error filtering index locations based on qualifier.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addDocumentNames(DiskIndex.java:115)
+	at org.eclipse.jdt.internal.core.index.Index.queryDocumentNames(Index.java:192)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.getIndexesNotInMeta(MetaIndex.java:78)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.findMatchingIndexNames(IndexManager.java:1608)
+	at org.eclipse.jdt.internal.core.search.IndexSelector.getIndexLocations(IndexSelector.java:310)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.selectIndexURLs(JavaSearchParticipant.java:160)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.getIndexes(PatternSearchJob.java:186)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:47)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:109)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:333)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:605)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:506)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:465)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:158)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1319)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:950)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:907)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.addSubtypes(MainMethodSearchEngine.java:129)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.searchMainMethods(MainMethodSearchEngine.java:106)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine$1.run(MainMethodSearchEngine.java:166)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:47:45.134
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:47:45.138
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:49:01.855
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:49:01.861
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:49:07.595
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:49:07.598
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:49:22.458
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:49:22.459
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 4 2022-12-28 07:49:59.290
+!MESSAGE Failed to save JDT index: Index for /AimsProject
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/2315386619.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1150)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1209)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2022-12-28 07:49:59.292
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Stream was closed for index location "file:/C:/Users/nguye/Documents/GitHub/OOP/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index"
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:751)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:640)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:532)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1256)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1232)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:826)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:458)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.core.resources 4 0 2022-12-28 07:52:00.970
+!MESSAGE Error occurred while reading master table file
+!STACK 0
+java.nio.charset.MalformedInputException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:274)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:176)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:329)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:396)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3416)
+	at org.eclipse.core.internal.resources.SaveManager.getBadSequenceNumberErrorMessage(SaveManager.java:1641)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1622)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1275)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1266)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1239)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1150)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-12-28 07:52:00.972
+!MESSAGE An internal error occurred during: "Periodic workspace save.".
+!STACK 0
+java.lang.IllegalArgumentException: Cannot set lower sequence number for root (previous: 11, new: 1). Location: C:\Users\nguye\Documents\GitHub\OOP\.metadata\.plugins\org.eclipse.core.resources\.safetable\org.eclipse.core.resourcesTimestamps and tree sequence numbers from file:
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.internal.resources.SaveManager.validateMasterTableBeforeSave(SaveManager.java:1623)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1275)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1266)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1239)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1150)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

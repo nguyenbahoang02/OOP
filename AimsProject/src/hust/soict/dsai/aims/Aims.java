@@ -9,6 +9,7 @@ import hust.soict.dsai.aims.media.Book;
 import hust.soict.dsai.aims.media.CompactDisc;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Track;
+import hust.soict.dsai.aims.screen.StoreScreen;
 import hust.soict.dsai.aims.store.Store;
 
 public class Aims {
@@ -104,159 +105,159 @@ public class Aims {
 		testStore.addMedia(cd2);
 		testStore.addMedia(book1);
 		testStore.addMedia(book2);
-		
-		while(showMenu) {
-			showMenu();
-			Scanner input = new Scanner(System.in);
-			int menu = input.nextInt();
-			switch (menu){
-			case 0: 
-				showMenu = false;
-				break;
-			case 1:
-				storeMenu = true;
-				while(storeMenu) {
-					storeMenu();
-					int store = input.nextInt();
-					switch (store) {
-					case 0: 
-						storeMenu = false;
-						break;
-					case 1:
-						String inputString = input();
-						if(testStore.find(inputString)!=null&&!(testStore.find(inputString) instanceof Book)) {
-							mediaDetails = true;
-							while(mediaDetails) {
-								mediaDetailsMenu();
-								int media = input.nextInt();
-								switch (media) {
-								case 0:
-									mediaDetails = false;
-									break;
-								case 1:
-									testCart.addMedia(testStore.find(inputString));
-									break;
-								case 2:
-									testStore.find(inputString).play();
-									break;
-								}
-							}
-						}else if(testStore.find(inputString)!=null){
-							mediaDetailsMenuForBooks();
-							mediaDetailsForBook = true;
-							while(mediaDetailsForBook) {
-								int mediaBook = input.nextInt();
-								switch (mediaBook) {
-								case  0:
-									mediaDetailsForBook = false;
-									break;
-								case 1:
-									testCart.addMedia(testStore.find(inputString));
-									break;
-								}
-							}
-						}else System.out.println("Can't find the media");
-						break;
-					case 2:
-						testStore.print();
-						String input1 = input();
-						if(testStore.find(input1)!=null) {
-							testCart.addMedia(testStore.find(input1));
-						}else {
-							System.out.println("Can't find the media");
-						}
-						break;
-					case 3:
-						testCart.printNoBook();
-						String input2 = input();
-						if(testStore.find(input2)!=null) {
-							testStore.find(input2).play();;
-						}else {
-							System.out.println("Can't find the media");
-						}
-						break;
-					case 4:
-						testCart.print();
-						break;
-					}
-				}
-				break;
-			case 2:
-				testStore.print();
-				System.out.println("Do you want to remove or add media to the Store");
-				System.out.println("Type 1 if add or 2 if remove");
-				int inputInt1 = input.nextInt();
-				if(inputInt1==1) {
-					//add later
-					System.out.println("You have added some media to the Store");
-				}else if(inputInt1 == 2) {
-					String input2 = input();
-					if(testStore.find(input2)!=null) {
-						testStore.removeMedia(testStore.find(input2));
-					}else {
-						System.out.println("Can't find the media");
-					}
-				}
-				break;
-			case 3:
-				cartMenu = true;
-				while(cartMenu) {
-					cartMenu();
-					int input3 = input.nextInt();
-					switch (input3) {
-					case 0:
-						cartMenu = false;
-						break;
-					case 1:
-						System.out.println("How do you want to filter your Cart");
-						System.out.println("1. By ID\n2. By Title");
-						int input6 = input.nextInt();
-						if(input6 == 1) {
-							testCart.printID();
-						}
-						else if(input6 == 2) {
-							testCart.printTitle();
-						}
-						break;
-					case 2:
-						System.out.println("How do you want to sort your Cart");
-						System.out.println("1. By cost\n2. By Title");
-						int input5 = input.nextInt();
-						if(input5 == 1) {
-							testCart.sortByCost();
-							testCart.printAll();
-						}
-						else if(input5 == 2) {
-							testCart.sortByTitle();
-							testCart.printAll();
-						}
-						break;
-					case 3:
-						testCart.printAll();
-						String input2 = input();
-						if(testCart.searchByTitle(input2)!=null) {
-							testCart.removeMedia(testCart.searchByTitle(input2));
-						}else {
-							System.out.println("Can't find the media");
-						}
-						break;
-					case 4:
-						testCart.printNoBook();
-						String input4 = input();
-						if(testStore.find(input4)!=null) {
-							testStore.find(input4).play();;
-						}else {
-							System.out.println("Can't find the media");
-						}
-						break;
-					case 5:
-						testCart.emptyCart();
-						System.out.println("An order has been placed");
-						break;
-					}
-				}
-				break;
-			}
-		}
+		StoreScreen ececScreen = new StoreScreen(testStore);
+//		while(showMenu) {
+//			showMenu();
+//			Scanner input = new Scanner(System.in);
+//			int menu = input.nextInt();
+//			switch (menu){
+//			case 0: 
+//				showMenu = false;
+//				break;
+//			case 1:
+//				storeMenu = true;
+//				while(storeMenu) {
+//					storeMenu();
+//					int store = input.nextInt();
+//					switch (store) {
+//					case 0: 
+//						storeMenu = false;
+//						break;
+//					case 1:
+//						String inputString = input();
+//						if(testStore.find(inputString)!=null&&!(testStore.find(inputString) instanceof Book)) {
+//							mediaDetails = true;
+//							while(mediaDetails) {
+//								mediaDetailsMenu();
+//								int media = input.nextInt();
+//								switch (media) {
+//								case 0:
+//									mediaDetails = false;
+//									break;
+//								case 1:
+//									testCart.addMedia(testStore.find(inputString));
+//									break;
+//								case 2:
+//									testStore.find(inputString).play();
+//									break;
+//								}
+//							}
+//						}else if(testStore.find(inputString)!=null){
+//							mediaDetailsMenuForBooks();
+//							mediaDetailsForBook = true;
+//							while(mediaDetailsForBook) {
+//								int mediaBook = input.nextInt();
+//								switch (mediaBook) {
+//								case  0:
+//									mediaDetailsForBook = false;
+//									break;
+//								case 1:
+//									testCart.addMedia(testStore.find(inputString));
+//									break;
+//								}
+//							}
+//						}else System.out.println("Can't find the media");
+//						break;
+//					case 2:
+//						testStore.print();
+//						String input1 = input();
+//						if(testStore.find(input1)!=null) {
+//							testCart.addMedia(testStore.find(input1));
+//						}else {
+//							System.out.println("Can't find the media");
+//						}
+//						break;
+//					case 3:
+//						testCart.printNoBook();
+//						String input2 = input();
+//						if(testStore.find(input2)!=null) {
+//							testStore.find(input2).play();;
+//						}else {
+//							System.out.println("Can't find the media");
+//						}
+//						break;
+//					case 4:
+//						testCart.print();
+//						break;
+//					}
+//				}
+//				break;
+//			case 2:
+//				testStore.print();
+//				System.out.println("Do you want to remove or add media to the Store");
+//				System.out.println("Type 1 if add or 2 if remove");
+//				int inputInt1 = input.nextInt();
+//				if(inputInt1==1) {
+//					//add later
+//					System.out.println("You have added some media to the Store");
+//				}else if(inputInt1 == 2) {
+//					String input2 = input();
+//					if(testStore.find(input2)!=null) {
+//						testStore.removeMedia(testStore.find(input2));
+//					}else {
+//						System.out.println("Can't find the media");
+//					}
+//				}
+//				break;
+//			case 3:
+//				cartMenu = true;
+//				while(cartMenu) {
+//					cartMenu();
+//					int input3 = input.nextInt();
+//					switch (input3) {
+//					case 0:
+//						cartMenu = false;
+//						break;
+//					case 1:
+//						System.out.println("How do you want to filter your Cart");
+//						System.out.println("1. By ID\n2. By Title");
+//						int input6 = input.nextInt();
+//						if(input6 == 1) {
+//							testCart.printID();
+//						}
+//						else if(input6 == 2) {
+//							testCart.printTitle();
+//						}
+//						break;
+//					case 2:
+//						System.out.println("How do you want to sort your Cart");
+//						System.out.println("1. By cost\n2. By Title");
+//						int input5 = input.nextInt();
+//						if(input5 == 1) {
+//							testCart.sortByCost();
+//							testCart.printAll();
+//						}
+//						else if(input5 == 2) {
+//							testCart.sortByTitle();
+//							testCart.printAll();
+//						}
+//						break;
+//					case 3:
+//						testCart.printAll();
+//						String input2 = input();
+//						if(testCart.searchByTitle(input2)!=null) {
+//							testCart.removeMedia(testCart.searchByTitle(input2));
+//						}else {
+//							System.out.println("Can't find the media");
+//						}
+//						break;
+//					case 4:
+//						testCart.printNoBook();
+//						String input4 = input();
+//						if(testStore.find(input4)!=null) {
+//							testStore.find(input4).play();;
+//						}else {
+//							System.out.println("Can't find the media");
+//						}
+//						break;
+//					case 5:
+//						testCart.emptyCart();
+//						System.out.println("An order has been placed");
+//						break;
+//					}
+//				}
+//				break;
+//			}
+//		}
 	}
 }
