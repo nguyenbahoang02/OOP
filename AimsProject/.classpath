@@ -32,11 +32,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="E:/Downloads/javafx-sdk-19/lib/javafx.swing.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="E:/Downloads/javafx-sdk-19/lib/javafx.web.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -47,13 +42,10 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="libs/javafx.base.jar"/>
-	<classpathentry kind="lib" path="libs/javafx.controls.jar"/>
-	<classpathentry kind="lib" path="libs/javafx.fxml.jar"/>
-	<classpathentry kind="lib" path="libs/javafx.graphics.jar"/>
-	<classpathentry kind="lib" path="libs/javafx.media.jar"/>
-	<classpathentry kind="lib" path="libs/javafx.swing.jar"/>
-	<classpathentry kind="lib" path="libs/javafx.web.jar"/>
-	<classpathentry kind="lib" path="libs/javafx-swt.jar"/>
+	<classpathentry kind="lib" path="E:/Downloads/javafx-sdk-19/lib/javafx.swing.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

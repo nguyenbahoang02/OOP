@@ -1,15 +1,20 @@
 package hust.soict.dsai.aims.cart;
-import java.util.ArrayList;
 import java.util.Collections;
 
 import hust.soict.dsai.aims.media.Book;
 import hust.soict.dsai.aims.media.Media;
-import hust.soict.dsai.aims.media.MediaComparatorByCostTitle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
-	public ArrayList<Media> itemsOrdered = 
-			new ArrayList<Media>();
+	public ObservableList<Media> itemsOrdered = 
+			FXCollections.observableArrayList();
+
+	
+	public ObservableList<Media> getItemsOrdered() {
+		return itemsOrdered;
+	}
 
 	public float totalCost(){
 		float sum=0;
