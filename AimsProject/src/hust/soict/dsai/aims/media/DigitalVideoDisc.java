@@ -1,19 +1,14 @@
 package hust.soict.dsai.aims.media;
 
-import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 public class DigitalVideoDisc extends Disc implements Playable{
 	private String director;
@@ -27,6 +22,10 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		this.length = length;
 		this.setCost(cost);
 		this.setId(getCurrentId());
+	}
+	
+	public int getLength() {
+		return length;
 	}
 	
 	@Override

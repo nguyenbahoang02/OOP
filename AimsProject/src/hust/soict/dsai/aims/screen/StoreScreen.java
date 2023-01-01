@@ -39,6 +39,7 @@ public class StoreScreen extends JFrame{
 		setVisible(true);
 		setTitle("Store");
 		setSize(1024, 768);
+		setResizable(false);
 		}
 
 	JPanel createNorth() {
@@ -54,9 +55,13 @@ public class StoreScreen extends JFrame{
 		JMenu smUpdateStore = new JMenu("Update Store");
 		JMenuItem addBook = new JMenuItem("Add Book");
 		addBook.addActionListener(new AddBook(this));
+		JMenuItem addDvd = new JMenuItem("Add DVD");
+		addDvd.addActionListener(new AddDvd(this));
+		JMenuItem addCd = new JMenuItem("Add CD");
+		addCd.addActionListener(new AddCd(this));
 		smUpdateStore.add(addBook);
-		smUpdateStore.add(new JMenuItem("Add CD"));
-		smUpdateStore.add(new JMenuItem("Add DVD"));
+		smUpdateStore.add(addCd);
+		smUpdateStore.add(addDvd);
 		menu.add(smUpdateStore);
 		menu.add(new JMenuItem("View Store"));
 		JMenuItem viewCart = new JMenuItem("View Cart");
@@ -100,11 +105,12 @@ public class StoreScreen extends JFrame{
 	private class ViewCart implements ActionListener{
 		private StoreScreen storeScreen;
 		public ViewCart(StoreScreen storeScreen) {
-			this.storeScreen = storeScreen;	
+			this.storeScreen = storeScreen;		
 		}
 		@Override
 		public void actionPerformed(ActionEvent e) { 
-			this.storeScreen.setVisible(false);
+			this.storeScreen.dispose();
+			CartScreen cartScreen = new CartScreen(cart, store, storeScreen);
 		}
 	}
 	
@@ -117,7 +123,31 @@ public class StoreScreen extends JFrame{
 		@Override
 		public void actionPerformed(ActionEvent e) { 
 			this.storeScreen.dispose();
-			AddBookToStoreScreen addBookToStoreScreen = new AddBookToStoreScreen(store, cart);
+			AddBookToStoreScreen addBookToStoreScreen = new AddBookToStoreScreen(store, cart, this.storeScreen);
+		}
+	}
+	
+	public class AddDvd implements ActionListener{
+		private StoreScreen storeScreen;
+		public AddDvd(StoreScreen storeScreen) {
+			this.storeScreen = storeScreen;	
+		}
+		@Override
+		public void actionPerformed(ActionEvent e) { 
+			this.storeScreen.dispose();
+			AddDvdToStoreScreen addDvdToStoreScreen = new AddDvdToStoreScreen(store, cart, this.storeScreen);
+		}
+	}
+	
+	public class AddCd implements ActionListener{
+		private StoreScreen storeScreen;
+		public AddCd(StoreScreen storeScreen) {
+			this.storeScreen = storeScreen;	
+		}
+		@Override
+		public void actionPerformed(ActionEvent e) { 
+			this.storeScreen.dispose();
+			AddCdToStoreScreen addCdToStoreScreen = new AddCdToStoreScreen(store, cart, this.storeScreen);
 		}
 	}
 }

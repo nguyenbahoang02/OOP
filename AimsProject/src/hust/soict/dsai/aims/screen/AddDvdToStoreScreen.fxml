@@ -22,9 +22,9 @@
                   <items>
                         <Menu mnemonicParsing="false" text="Update Store">
                           <items>
-                            <MenuItem mnemonicParsing="false" text="Add Book" />
+                            <MenuItem mnemonicParsing="false" onAction="#addBook" text="Add Book" />
                           <MenuItem mnemonicParsing="false" onAction="#addCd" text="Add CD" />
-                              <MenuItem mnemonicParsing="false" onAction="#addDvd" text="Add DVD" />
+                              <MenuItem mnemonicParsing="false" text="Add DVD" />
                           </items>
                         </Menu>
                         <MenuItem mnemonicParsing="false" onAction="#viewStore" text="View Store" />
@@ -55,7 +55,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <HBox prefHeight="30.0" prefWidth="200.0" spacing="200.0">
+            <HBox prefHeight="30.0" prefWidth="200.0" spacing="150.0">
                <children>
                   <Label text="Title">
                      <HBox.margin>
@@ -73,12 +73,17 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="Cost">
+                  <Label text="Director">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="Authors">
+                  <Label text="Length">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Cost">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -92,13 +97,21 @@
                         <Insets left="30.0" />
                      </HBox.margin>
                   </TextField>
-                  <TextField fx:id="category" prefHeight="25.0" prefWidth="172.0" />
-                  <TextField fx:id="cost">
+                  <TextField fx:id="category" prefHeight="25.0" prefWidth="165.0" />
+                  <TextField fx:id="director" prefHeight="25.0" prefWidth="154.0">
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </TextField>
-                  <TextField fx:id="authors" prefHeight="25.0" prefWidth="219.0" />
+                  <TextField fx:id="length" prefHeight="25.0" prefWidth="161.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="cost" prefHeight="25.0" prefWidth="142.0">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin></TextField>
                </children>
             </HBox>
             <Button mnemonicParsing="false" onAction="#add" prefHeight="72.0" prefWidth="87.0" text="ADD">

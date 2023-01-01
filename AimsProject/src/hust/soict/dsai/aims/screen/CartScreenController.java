@@ -63,8 +63,17 @@ public class CartScreenController {
     
     @FXML
     void addBook(ActionEvent event) {
-    	this.storeScreen.dispose();
-		AddBookToStoreScreen addBookToStoreScreen = new AddBookToStoreScreen(store, cart);
+		AddBookToStoreScreen addBookToStoreScreen = new AddBookToStoreScreen(store, cart, storeScreen);
+    }
+    
+    @FXML
+    void addDvd(ActionEvent event) {
+    	AddDvdToStoreScreen addDvdToStoreScreen = new AddDvdToStoreScreen(store, cart, storeScreen);
+    }
+    
+    @FXML
+    void addCd(ActionEvent event) {
+    	AddCdToStoreScreen addCdToStoreScreen = new AddCdToStoreScreen(store, cart, this.storeScreen);
     }
     
     @FXML
@@ -102,7 +111,8 @@ public class CartScreenController {
     
     @FXML
     void viewStore(ActionEvent event) {
-    	storeScreen.setVisible(true);
+    	storeScreen.dispose();
+    	StoreScreen storeScreen = new StoreScreen(store, cart);
     }
     
     @FXML

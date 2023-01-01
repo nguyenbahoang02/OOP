@@ -22,8 +22,8 @@
                   <items>
                         <Menu mnemonicParsing="false" text="Update Store">
                           <items>
-                            <MenuItem mnemonicParsing="false" text="Add Book" />
-                          <MenuItem mnemonicParsing="false" onAction="#addCd" text="Add CD" />
+                            <MenuItem mnemonicParsing="false" onAction="#addBook" text="Add Book" />
+                          <MenuItem mnemonicParsing="false" text="Add CD" />
                               <MenuItem mnemonicParsing="false" onAction="#addDvd" text="Add DVD" />
                           </items>
                         </Menu>
@@ -55,7 +55,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <HBox prefHeight="30.0" prefWidth="200.0" spacing="200.0">
+            <HBox prefHeight="30.0" prefWidth="200.0" spacing="100.0">
                <children>
                   <Label text="Title">
                      <HBox.margin>
@@ -68,17 +68,33 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="Category">
+                  <Label prefHeight="30.0" prefWidth="86.0" text="Category">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="76.0" text="Director">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="Cost">
+                  <Label text="Length">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label text="Authors">
+                  <Label prefHeight="30.0" prefWidth="48.0" text="Cost">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="Artists">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -87,18 +103,31 @@
             </HBox>
             <HBox prefHeight="30.0" prefWidth="200.0" spacing="80.0">
                <children>
-                  <TextField fx:id="title">
+                  <TextField fx:id="title" prefHeight="25.0" prefWidth="145.0">
                      <HBox.margin>
-                        <Insets left="30.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
                   </TextField>
-                  <TextField fx:id="category" prefHeight="25.0" prefWidth="172.0" />
-                  <TextField fx:id="cost">
+                  <TextField fx:id="category" prefHeight="25.0" prefWidth="185.0" />
+                  <TextField fx:id="director" prefHeight="25.0" prefWidth="154.0">
                      <HBox.margin>
-                        <Insets left="40.0" />
+                        <Insets />
                      </HBox.margin>
                   </TextField>
-                  <TextField fx:id="authors" prefHeight="25.0" prefWidth="219.0" />
+                  <TextField fx:id="length" prefHeight="25.0" prefWidth="161.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="cost" prefHeight="25.0" prefWidth="163.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></TextField>
+                  <TextField fx:id="artists" prefHeight="25.0" prefWidth="158.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
                </children>
             </HBox>
             <Button mnemonicParsing="false" onAction="#add" prefHeight="72.0" prefWidth="87.0" text="ADD">

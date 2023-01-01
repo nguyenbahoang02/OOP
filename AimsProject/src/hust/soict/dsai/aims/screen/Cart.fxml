@@ -28,8 +28,8 @@
                         <Menu mnemonicParsing="false" text="Update Store">
                           <items>
                             <MenuItem mnemonicParsing="false" onAction="#addBook" text="Add Book" />
-                              <MenuItem mnemonicParsing="false" text="Add CD" />
-                              <MenuItem mnemonicParsing="false" text="Add DVD" />
+                              <MenuItem mnemonicParsing="false" onAction="#addCd" text="Add CD" />
+                              <MenuItem mnemonicParsing="false" onAction="#addDvd" text="Add DVD" />
                           </items>
                         </Menu>
                         <MenuItem mnemonicParsing="false" onAction="#viewStore" text="View Store" />

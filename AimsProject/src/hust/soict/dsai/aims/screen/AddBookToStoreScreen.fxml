@@ -12,8 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+<BorderPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -24,12 +23,12 @@
                         <Menu mnemonicParsing="false" text="Update Store">
                           <items>
                             <MenuItem mnemonicParsing="false" text="Add Book" />
-                          <MenuItem mnemonicParsing="false" text="Add CD" />
-                              <MenuItem mnemonicParsing="false" text="Add DVD" />
+                          <MenuItem mnemonicParsing="false" onAction="#addCd" text="Add CD" />
+                              <MenuItem mnemonicParsing="false" onAction="#addDvd" text="Add DVD" />
                           </items>
                         </Menu>
-                        <MenuItem mnemonicParsing="false" text="View Store" />
-                        <MenuItem mnemonicParsing="false" text="View Cart" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewStore" text="View Store" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewCart" text="View Cart" />
                   </items>
                 </Menu>
               </menus>
