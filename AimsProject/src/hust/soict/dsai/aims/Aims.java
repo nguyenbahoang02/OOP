@@ -78,11 +78,11 @@ public class Aims {
 	}
 	
 	public static void main(String[] args) {
-		boolean showMenu = true;
-		boolean storeMenu = true;
-		boolean mediaDetails = true;
-		boolean mediaDetailsForBook = true;
-		boolean cartMenu = true;
+//		boolean showMenu = true;
+//		boolean storeMenu = true;
+//		boolean mediaDetails = true;
+//		boolean mediaDetailsForBook = true;
+//		boolean cartMenu = true;
 		Store testStore = new Store();
 		Cart testCart = new Cart();
 		List<String> authorList = new ArrayList<>();
@@ -105,10 +105,6 @@ public class Aims {
 		testStore.addMedia(cd2);
 		testStore.addMedia(book1);
 		testStore.addMedia(book2);
-//		testCart.addMedia(dvd1);
-//		testCart.addMedia(cd1);
-//		testCart.addMedia(cd2);
-//		testCart.addMedia(book1);
 		StoreScreen testScreen = new StoreScreen(testStore, testCart);
 		CartScreen testCartScreen = new CartScreen(testCart, testScreen);
 //		while(showMenu) {

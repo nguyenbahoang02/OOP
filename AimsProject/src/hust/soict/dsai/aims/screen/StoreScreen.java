@@ -52,11 +52,18 @@ public class StoreScreen extends JFrame{
 	JMenuBar createMenuBar() {
 		JMenu menu = new JMenu("Options");
 		JMenu smUpdateStore = new JMenu("Update Store");
-		smUpdateStore.add(new JMenuItem("Add Book"));
+		JMenuItem addBook = new JMenuItem("Add Book");
+		addBook.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				AddBookToStoreScreen addBookToStoreScreen = new AddBookToStoreScreen(store);
+			}
+		});
+		smUpdateStore.add(addBook);
 		smUpdateStore.add(new JMenuItem("Add CD"));
 		smUpdateStore.add(new JMenuItem("Add DVD"));
 		menu.add(smUpdateStore);
-		menu.add(new JMenuItem("View store"));
+		menu.add(new JMenuItem("View Store"));
 		JMenuItem viewCart = new JMenuItem("View Cart");
 		viewCart.addActionListener(new ViewCart(this));
 		menu.add(viewCart);
@@ -105,6 +112,7 @@ public class StoreScreen extends JFrame{
 			this.storeScreen.setVisible(false);
 		}
 	}
+	
 }
 
 

@@ -29,7 +29,6 @@ public class CartScreenController {
 	
 	private Cart cart;
 	private StoreScreen storeScreen;
-	private CartScreen cartScreen;
 	private boolean filteredById = false;
 	private boolean filteredByTitle = false;
 	@FXML
@@ -63,6 +62,9 @@ public class CartScreenController {
     void btnRemovePressed(ActionEvent event) {
     	Media media = tblMedia.getSelectionModel().getSelectedItem();
     	cart.removeMedia(media);
+    	if(cart.getItemsOrdered().size()==0) {
+    		totalCost.setText("0.00 $");
+    	}
     }
     
     @FXML
