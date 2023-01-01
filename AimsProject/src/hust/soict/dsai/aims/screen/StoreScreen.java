@@ -53,12 +53,7 @@ public class StoreScreen extends JFrame{
 		JMenu menu = new JMenu("Options");
 		JMenu smUpdateStore = new JMenu("Update Store");
 		JMenuItem addBook = new JMenuItem("Add Book");
-		addBook.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				AddBookToStoreScreen addBookToStoreScreen = new AddBookToStoreScreen(store);
-			}
-		});
+		addBook.addActionListener(new AddBook(this));
 		smUpdateStore.add(addBook);
 		smUpdateStore.add(new JMenuItem("Add CD"));
 		smUpdateStore.add(new JMenuItem("Add DVD"));
@@ -113,6 +108,18 @@ public class StoreScreen extends JFrame{
 		}
 	}
 	
+	
+	public class AddBook implements ActionListener{
+		private StoreScreen storeScreen;
+		public AddBook(StoreScreen storeScreen) {
+			this.storeScreen = storeScreen;	
+		}
+		@Override
+		public void actionPerformed(ActionEvent e) { 
+			this.storeScreen.dispose();
+			AddBookToStoreScreen addBookToStoreScreen = new AddBookToStoreScreen(store, cart);
+		}
+	}
 }
 
 

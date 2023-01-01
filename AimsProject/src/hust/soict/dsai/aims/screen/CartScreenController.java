@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.Media;
 import hust.soict.dsai.aims.media.Playable;
+import hust.soict.dsai.aims.store.Store;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -28,6 +29,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class CartScreenController {
 	
 	private Cart cart;
+	private Store store;
 	private StoreScreen storeScreen;
 	private boolean filteredById = false;
 	private boolean filteredByTitle = false;
@@ -52,10 +54,17 @@ public class CartScreenController {
     @FXML
     private Button btnRemove;
     
-    public CartScreenController(Cart cart, StoreScreen storeScreen) {
+    public CartScreenController(Cart cart, Store store,StoreScreen storeScreen) {
     	super();
     	this.cart = cart;
+    	this.store = store;
     	this.storeScreen = storeScreen;
+    }
+    
+    @FXML
+    void addBook(ActionEvent event) {
+    	this.storeScreen.dispose();
+		AddBookToStoreScreen addBookToStoreScreen = new AddBookToStoreScreen(store, cart);
     }
     
     @FXML

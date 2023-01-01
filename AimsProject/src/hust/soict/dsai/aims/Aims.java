@@ -106,7 +106,7 @@ public class Aims {
 		testStore.addMedia(book1);
 		testStore.addMedia(book2);
 		StoreScreen testScreen = new StoreScreen(testStore, testCart);
-		CartScreen testCartScreen = new CartScreen(testCart, testScreen);
+		CartScreen testCartScreen = new CartScreen(testCart, testStore,testScreen);
 //		while(showMenu) {
 //			showMenu();
 //			Scanner input = new Scanner(System.in);
