@@ -1,5 +1,16 @@
 package hust.soict.dsai.aims.screen;
 
+import java.awt.BorderLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.Insets;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.Media;
 import hust.soict.dsai.aims.media.Playable;
@@ -8,7 +19,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -71,6 +81,32 @@ public class CartScreenController {
     void radioBtnFilterTitle(ActionEvent event) {
     	filteredById = false;
     	filteredByTitle = true;
+    }
+    
+    @FXML
+    void placeOrder(ActionEvent event) {
+    	cart.emptyCart();
+    	JDialog jDialog = new JDialog();
+    	jDialog.setAlwaysOnTop(true);
+		jDialog.setSize(200, 150);
+		jDialog.setLayout(new GridBagLayout());
+		GridBagConstraints constraints = new GridBagConstraints();
+		constraints.weightx = 1.0;
+		constraints.gridx = GridBagConstraints.REMAINDER;
+		constraints.insets = new Insets(0, 0, 20, 0);
+		JLabel jLabel = new JLabel("Your order has been set");
+		jDialog.add(jLabel, constraints);
+		JButton button = new JButton("OK");
+		constraints.insets = new Insets(0, 0, 0, 0);
+		jDialog.add(button, constraints);
+		jDialog.setLocationRelativeTo(null);
+		jDialog.setVisible(true);
+		button.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+				jDialog.setVisible(false);
+			}
+		});		
     }
     
     @FXML

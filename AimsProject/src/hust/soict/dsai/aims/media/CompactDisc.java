@@ -1,6 +1,9 @@
 package hust.soict.dsai.aims.media;
 
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -51,16 +54,21 @@ public class CompactDisc extends Disc implements Playable{
 	public void play() {
 		JDialog jDialog = new JDialog();
 		jDialog.setAlwaysOnTop(true);
-		jDialog.setSize(400, 300);
-		jDialog.setLayout(new GridLayout(tracks.size()*2+1, 1));
+		jDialog.setSize(200, 150 + (tracks.size()-1)*40);
+		jDialog.setLayout(new GridBagLayout());
+		GridBagConstraints constraints = new GridBagConstraints();
+		constraints.weightx = 1.0;
+		constraints.gridx = GridBagConstraints.REMAINDER;
+		constraints.insets = new Insets(10, 0, 10, 0);
 		for(int i=0;i<tracks.size();i++) {
 			JLabel jLabel1 = new JLabel("Playing DVD: " + this.getTitle());
 			JLabel jLabel2 = new JLabel("DVD length: " + this.getLength());
-			jDialog.add(jLabel1);
-			jDialog.add(jLabel2);
+			jDialog.add(jLabel1, constraints);
+			constraints.insets = new Insets(0, 0, 10, 0);
+			jDialog.add(jLabel2, constraints);
 		}
 		JButton button = new JButton("OK");
-		jDialog.add(button);
+		jDialog.add(button, constraints);
 		jDialog.setLocationRelativeTo(null);
 		jDialog.setVisible(true);
 		button.addActionListener(new ActionListener() {
