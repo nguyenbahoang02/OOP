@@ -11,7 +11,6 @@ public class Cart {
 	public ObservableList<Media> itemsOrdered = 
 			FXCollections.observableArrayList();
 
-	
 	public ObservableList<Media> getItemsOrdered() {
 		return itemsOrdered;
 	}
@@ -60,6 +59,31 @@ public class Cart {
 			}
 		}
 		return null;
+	}
+	
+	public ObservableList<Media> filteredById(String Id) {
+		if(Id.equals("")) return null;
+		int id = Integer.parseInt(Id);
+		ObservableList<Media> filteredItems = 
+				FXCollections.observableArrayList();
+		for(int i=0;i<itemsOrdered.size();i++) {
+			if(id==itemsOrdered.get(i).getId()) {
+				filteredItems.add(itemsOrdered.get(i));
+			}
+		}
+		return filteredItems;
+	}
+	
+	public ObservableList<Media> filteredByTitle(String Id) {
+		ObservableList<Media> filteredItems = 
+				FXCollections.observableArrayList();
+		if(Id.equals("")) return itemsOrdered;
+		for(int i=0;i<itemsOrdered.size();i++) {
+			if(itemsOrdered.get(i).getTitle().contains(Id)) {
+				filteredItems.add(itemsOrdered.get(i));
+			}
+		}
+		return filteredItems;
 	}
 	
 	public void printNoBook() {
