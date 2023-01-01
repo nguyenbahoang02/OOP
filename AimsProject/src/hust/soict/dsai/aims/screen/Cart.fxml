@@ -32,7 +32,7 @@
                               <MenuItem mnemonicParsing="false" text="Add DVD" />
                           </items>
                         </Menu>
-                        <MenuItem mnemonicParsing="false" text="View Store" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewStore" text="View Store" />
                         <MenuItem mnemonicParsing="false" text="View Cart" />
                      </items>
                 </Menu>
@@ -102,7 +102,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label text="0$" textFill="AQUA">
+                  <Label fx:id="totalCost" text="0$" textFill="AQUA">
                      <font>
                         <Font size="24.0" />
                      </font>

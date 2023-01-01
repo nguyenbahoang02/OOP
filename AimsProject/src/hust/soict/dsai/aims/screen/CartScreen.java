@@ -1,9 +1,7 @@
 package hust.soict.dsai.aims.screen;
 
 import java.io.IOException;
-
 import javax.swing.JFrame;
-
 import hust.soict.dsai.aims.cart.Cart;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -11,10 +9,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-
 public class CartScreen extends JFrame{
 	private Cart cart;
-	public CartScreen(Cart cart){
+	public CartScreen(Cart cart, StoreScreen storeScreen){
 		super();
 		this.cart = cart;
 		JFXPanel fxPanel = new JFXPanel();
@@ -30,7 +27,7 @@ public class CartScreen extends JFrame{
 					FXMLLoader loader = new FXMLLoader(getClass()
 							.getResource("/hust/soict/dsai/aims/screen/Cart.fxml"));
 					CartScreenController controller = 
-							new CartScreenController(cart);
+							new CartScreenController(cart,storeScreen);
 					loader.setController(controller);
 					Parent rootParent = loader.load();
 					fxPanel.setScene(new Scene(rootParent));

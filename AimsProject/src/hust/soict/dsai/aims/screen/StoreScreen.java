@@ -8,6 +8,8 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.Box;
@@ -38,7 +40,7 @@ public class StoreScreen extends JFrame{
 		setTitle("Store");
 		setSize(1024, 768);
 		}
-	
+
 	JPanel createNorth() {
 		JPanel northJPanel = new JPanel();
 		northJPanel.setLayout(new BoxLayout(northJPanel, BoxLayout.Y_AXIS));
@@ -55,12 +57,12 @@ public class StoreScreen extends JFrame{
 		smUpdateStore.add(new JMenuItem("Add DVD"));
 		menu.add(smUpdateStore);
 		menu.add(new JMenuItem("View store"));
-		menu.add(new JMenuItem("View cart"));
-		
+		JMenuItem viewCart = new JMenuItem("View Cart");
+		viewCart.addActionListener(new ViewCart(this));
+		menu.add(viewCart);
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setLayout(new FlowLayout(FlowLayout.LEFT));
 		menuBar.add(menu);
-		
 		return menuBar;
 	}
 	
@@ -71,6 +73,7 @@ public class StoreScreen extends JFrame{
 		title.setFont(new Font(title.getFont().getName(), Font.PLAIN, 50));
 		title.setForeground(Color.CYAN);
 		JButton cart = new JButton("View cart");
+		cart.addActionListener(new ViewCart(this));
 		cart.setPreferredSize(new Dimension(100, 50));
 		cart.setMaximumSize(new Dimension(100, 50));
 		header.add(Box.createRigidArea(new Dimension(10, 10)));
@@ -90,6 +93,17 @@ public class StoreScreen extends JFrame{
 			center.add(cell);
 		}
 		return center;
+	}
+	
+	private class ViewCart implements ActionListener{
+		private StoreScreen storeScreen;
+		public ViewCart(StoreScreen storeScreen) {
+			this.storeScreen = storeScreen;	
+		}
+		@Override
+		public void actionPerformed(ActionEvent e) { 
+			this.storeScreen.setVisible(false);
+		}
 	}
 }
 

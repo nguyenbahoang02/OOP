@@ -1,11 +1,10 @@
 package hust.soict.dsai.aims.screen;
 
-import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -19,6 +18,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -28,6 +28,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class CartScreenController {
 	
 	private Cart cart;
+	private StoreScreen storeScreen;
+	private CartScreen cartScreen;
 	private boolean filteredById = false;
 	private boolean filteredByTitle = false;
 	@FXML
@@ -51,9 +53,10 @@ public class CartScreenController {
     @FXML
     private Button btnRemove;
     
-    public CartScreenController(Cart cart) {
+    public CartScreenController(Cart cart, StoreScreen storeScreen) {
     	super();
     	this.cart = cart;
+    	this.storeScreen = storeScreen;
     }
     
     @FXML
@@ -81,6 +84,14 @@ public class CartScreenController {
     void radioBtnFilterTitle(ActionEvent event) {
     	filteredById = false;
     	filteredByTitle = true;
+    }
+    
+    @FXML
+    private Label totalCost;
+    
+    @FXML
+    void viewStore(ActionEvent event) {
+    	storeScreen.setVisible(true);
     }
     
     @FXML
@@ -120,11 +131,16 @@ public class CartScreenController {
     	tblMedia.setItems(cart.getItemsOrdered());
     	btnPlay.setVisible(false);
     	btnRemove.setVisible(false);
+    	totalCost.setText(cart.totalCost() + "$");
     	tblMedia.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Media>() {
     		@Override
     		public void changed(ObservableValue<? extends Media> observable, Media oldValue, Media newValue) {
     			if(newValue!=null) {
     				updateButtonBar(newValue);
+    				Float total = cart.totalCost();
+    				DecimalFormat df = new DecimalFormat("#.00");
+    				String totalCostInString = df.format(total);
+    				totalCost.setText(totalCostInString + " $");
     			}
     		}
 		});
@@ -134,6 +150,7 @@ public class CartScreenController {
     			showFilteredMedia(newValue);
     		}
 		});
+    	
     }
     void updateButtonBar(Media media) {
     	btnRemove.setVisible(true);
@@ -148,7 +165,7 @@ public class CartScreenController {
     void showFilteredMedia(String string) {
     	if(filteredById == true) {
     		tblMedia.setItems(cart.filteredById(string));
-    	}else {
+    	}else if(filteredByTitle == true){
     		tblMedia.setItems(cart.filteredByTitle(string));
     	}
     }

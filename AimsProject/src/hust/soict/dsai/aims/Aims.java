@@ -105,12 +105,12 @@ public class Aims {
 		testStore.addMedia(cd2);
 		testStore.addMedia(book1);
 		testStore.addMedia(book2);
-		testCart.addMedia(dvd1);
-		testCart.addMedia(cd1);
-		testCart.addMedia(cd2);
-		testCart.addMedia(book1);
+//		testCart.addMedia(dvd1);
+//		testCart.addMedia(cd1);
+//		testCart.addMedia(cd2);
+//		testCart.addMedia(book1);
 		StoreScreen testScreen = new StoreScreen(testStore, testCart);
-		CartScreen testCartScreen = new CartScreen(testCart);
+		CartScreen testCartScreen = new CartScreen(testCart, testScreen);
 //		while(showMenu) {
 //			showMenu();
 //			Scanner input = new Scanner(System.in);
