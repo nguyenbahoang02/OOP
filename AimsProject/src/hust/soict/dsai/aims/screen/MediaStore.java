@@ -5,14 +5,18 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.naming.LimitExceededException;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.exception.PlayerException;
 import hust.soict.dsai.aims.media.Media;
 import hust.soict.dsai.aims.media.Playable;
 
@@ -32,7 +36,12 @@ public class MediaStore extends JPanel{
 		addButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				cart.addMedia(media);
+				try {
+					cart.addMedia(media);
+				} catch (LimitExceededException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		container.add(addButton);
@@ -52,7 +61,13 @@ public class MediaStore extends JPanel{
 	private class ClickedListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) { 
-			media.play();
+			try {
+				media.play();
+			} catch (PlayerException e1) {
+				// TODO Auto-generated catch block
+				JOptionPane.showMessageDialog(null, e1.getMessage().toString(), "Alert", JOptionPane.ERROR_MESSAGE);
+				e1.printStackTrace();
+			}
 		}
 	}
 }

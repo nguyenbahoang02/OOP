@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.MediaComparatorByCostTitle"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.awt.Frame"/>
     <fullyQualifiedTypeName name="java.awt.TextField"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
@@ -40,7 +36,6 @@
     <fullyQualifiedTypeName name="java.awt.image.renderable.ContextualRenderedImageFactory"/>
     <fullyQualifiedTypeName name="java.awt.Container"/>
     <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
-    <fullyQualifiedTypeName name="hust.soict.dsai.aims.cart.Cart"/>
     <fullyQualifiedTypeName name="javax.swing.JDialog"/>
     <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
@@ -60,4 +55,9 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.Pane"/>
     <fullyQualifiedTypeName name="javafx.scene.control.ToggleGroup"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.cart.Cart"/>
+    <fullyQualifiedTypeName name="javax.naming.LimitExceededException"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.exception.PlayerException"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

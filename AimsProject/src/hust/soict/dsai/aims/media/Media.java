@@ -2,6 +2,8 @@ package hust.soict.dsai.aims.media;
 
 import java.util.Comparator;
 
+import hust.soict.dsai.aims.exception.PlayerException;
+
 public abstract class Media extends Object{
 	private int id;
 	private String title;
@@ -56,7 +58,6 @@ public abstract class Media extends Object{
 
 	public Media() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
@@ -70,7 +71,7 @@ public abstract class Media extends Object{
 		}
 		return a;
 	}
-	public void play() {
+	public void play() throws PlayerException {
 		
 	}
 

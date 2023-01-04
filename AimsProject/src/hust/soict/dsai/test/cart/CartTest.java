@@ -1,4 +1,6 @@
 package hust.soict.dsai.test.cart;
+import javax.naming.LimitExceededException;
+
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
@@ -20,7 +22,12 @@ public class CartTest {
 		dvdlist[0] = dvd1;
 		dvdlist[1] = dvd2;
 		dvdlist[2] = dvd3;
-		anOrder.addMedia(dvd1);
+		try {
+			anOrder.addMedia(dvd1);
+		} catch (LimitExceededException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		anOrder.print();
 		anOrder.searchByTitle("The Lion King");
 		anOrder.searchByTitle("Frozen");

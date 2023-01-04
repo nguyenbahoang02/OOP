@@ -8,6 +8,8 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 
+import hust.soict.dsai.aims.exception.PlayerException;
+
 public class Track implements Playable{
 	private String title;
 	private int length;
@@ -26,23 +28,27 @@ public class Track implements Playable{
 		this.length = length;
 		
 	}
-	public void play() {
-		JDialog jDialog = new JDialog();
-		jDialog.setAlwaysOnTop(true);
-		jDialog.setSize(400, 300);
-		jDialog.setLayout(new FlowLayout());
-		jDialog.setLocationRelativeTo(null);
-		JButton button = new JButton("OK");
-		jDialog.add(button);
-		jDialog.setVisible(true);
-		JLabel jLabel = new JLabel("Playing DVD: " + this.getTitle() + "\nDVD length: " + this.getLength());
-		jDialog.add(jLabel);
-		button.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				jDialog.setVisible(false);
-			}
-		});		
+	public void play() throws PlayerException {
+		if(getLength()>0) {
+			JDialog jDialog = new JDialog();
+			jDialog.setAlwaysOnTop(true);
+			jDialog.setSize(400, 300);
+			jDialog.setLayout(new FlowLayout());
+			jDialog.setLocationRelativeTo(null);
+			JButton button = new JButton("OK");
+			jDialog.add(button);
+			jDialog.setVisible(true);
+			JLabel jLabel = new JLabel("Playing DVD: " + this.getTitle() + "\nDVD length: " + this.getLength());
+			jDialog.add(jLabel);
+			button.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					jDialog.setVisible(false);
+				}
+			});		
+		}else {
+			throw new PlayerException("ERROR: DVD length is non-positive!");
+		}
 	}
 	
 	public String playString() {
