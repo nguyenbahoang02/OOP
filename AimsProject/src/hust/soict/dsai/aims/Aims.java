@@ -88,7 +88,14 @@ public class Aims {
 		List<String> authorList = new ArrayList<>();
 		authorList.add("Tuan Anh");
 		Book book1 = new Book("Book1", "Cate1", 13f, authorList);
-		Book book2 = new Book("Book2", "Cate2", 12f, authorList);
+		Book book2 = new Book("book2", "Cate1", 13f, authorList);
+		Book book3 = new Book("book3", "Cate1", 13f, authorList);
+		Book book4 = new Book("book4", "Cate1", 13f, authorList);
+		Book book5 = new Book("book5", "Cate1", 13f, authorList);
+		Book book6 = new Book("book6", "Cate1", 13f, authorList);
+		Book book7 = new Book("book7", "Cate1", 13f, authorList);
+		Book book8 = new Book("book8", "Cate1", 13f, authorList);
+		Book book9 = new Book("book9", "Cate2", 12f, authorList);
 		CompactDisc cd1 = new CompactDisc("Title1", "Cate1", "Dir", 5, 16.5f, "Tuan Anh");
 		CompactDisc cd2 = new CompactDisc("Title2", "Cate2", "Dir", 6, 6.5f, "Huy");
 		Track track1 = new Track("Hoang", 1);
