@@ -14,4 +14,5 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="hust.soict.dsai.aims.Aims"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="AimsProject"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="AimsProject"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--module-path &quot;javafx-sdk-19\lib&quot; --add-modules javafx.web,javafx.media,javafx.swing,javafx.controls,javafx.fxml"/>
 </launchConfiguration>

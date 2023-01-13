@@ -1,6 +1,8 @@
 package hust.soict.dsai.aims.cart;
 import java.util.Collections;
 
+import javax.naming.LimitExceededException;
+
 import hust.soict.dsai.aims.media.Book;
 import hust.soict.dsai.aims.media.Media;
 import javafx.collections.FXCollections;
@@ -23,15 +25,19 @@ public class Cart {
 		return sum;
 	}
 	
-	public void addMedia(Media inputMedia) {
+	public void addMedia(Media inputMedia) throws LimitExceededException {
 		for (Media media : itemsOrdered) {
 			if(media.getTitle().equals(inputMedia.getTitle())&&media.getCategory().equals(inputMedia.getCategory())) {
 				System.out.println("This item is already in the Cart");
 				return;
 			}
 		}
-		itemsOrdered.add(inputMedia);
-		System.out.println("Item has been added");
+		if(itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
+			itemsOrdered.add(inputMedia);
+			System.out.println("Item has been added");
+		}else {
+			throw new LimitExceededException("ERROR: The number of "+ "media has reached its limit");
+		}
 	}
 	
 	public void removeMedia(Media inputMedia) {

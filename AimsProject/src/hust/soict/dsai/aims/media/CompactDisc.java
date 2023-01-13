@@ -12,6 +12,8 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 
+import hust.soict.dsai.aims.exception.PlayerException;
+
 public class CompactDisc extends Disc implements Playable{
 	private String artist;
 	private ArrayList<Track> tracks = new ArrayList<Track>();
@@ -51,7 +53,7 @@ public class CompactDisc extends Disc implements Playable{
 		return sum;
 	}
 	
-	public void play() {
+	public void play() throws PlayerException {
 		JDialog jDialog = new JDialog();
 		jDialog.setAlwaysOnTop(true);
 		jDialog.setSize(200, 150 + (tracks.size()-1)*40);
@@ -61,11 +63,15 @@ public class CompactDisc extends Disc implements Playable{
 		constraints.gridx = GridBagConstraints.REMAINDER;
 		constraints.insets = new Insets(10, 0, 10, 0);
 		for(int i=0;i<tracks.size();i++) {
-			JLabel jLabel1 = new JLabel("Playing DVD: " + this.getTitle());
-			JLabel jLabel2 = new JLabel("DVD length: " + this.getLength());
-			jDialog.add(jLabel1, constraints);
-			constraints.insets = new Insets(0, 0, 10, 0);
-			jDialog.add(jLabel2, constraints);
+			if(tracks.get(i).getLength()>0) {
+				JLabel jLabel1 = new JLabel("Playing DVD: " + tracks.get(i).getTitle());
+				JLabel jLabel2 = new JLabel("DVD length: " + tracks.get(i).getLength());
+				jDialog.add(jLabel1, constraints);
+				constraints.insets = new Insets(0, 0, 10, 0);
+				jDialog.add(jLabel2, constraints);
+			}else {
+				throw new PlayerException("ERROR: DVD length is non-positive");
+			}
 		}
 		JButton button = new JButton("OK");
 		jDialog.add(button, constraints);

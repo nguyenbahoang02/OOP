@@ -9,8 +9,10 @@ import java.text.DecimalFormat;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.exception.PlayerException;
 import hust.soict.dsai.aims.media.Media;
 import hust.soict.dsai.aims.media.Playable;
 import hust.soict.dsai.aims.store.Store;
@@ -88,7 +90,12 @@ public class CartScreenController {
     @FXML
     void btnPlayPressed(ActionEvent event) {
     	Media media = tblMedia.getSelectionModel().getSelectedItem();
-    	media.play();
+    	try {
+			media.play();
+		} catch (PlayerException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage().toString(), "Alert", JOptionPane.ERROR_MESSAGE);
+			e.printStackTrace();
+		}
     }
     
     @FXML
